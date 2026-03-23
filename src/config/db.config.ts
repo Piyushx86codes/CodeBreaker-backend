@@ -9,7 +9,7 @@ export const  connectDB = async()=>{
         await mongoose.connect(dbUrl);
         logger.info("Successfully Connected to DataBase");
         mongoose.connection.on("error",(error)=>{
-            logger.error("MpngoDb Connection Error",error);
+            logger.error("MongoDb Connection Error",error);
         })
         mongoose.connection.on("disconnected",()=>{
             logger.warn("MongoDb disconnected");
